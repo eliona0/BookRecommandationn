@@ -341,3 +341,92 @@ input{
     margin-top: 0;
     color: gray;
 }
+.section{
+    width: 100%;
+    background-image: url("./images/backgroundSection.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-content{
+    width:80%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    background-color: #ffcbca;
+    
+}
+
+.section-content h1{
+    font-size: 60px;
+    color:#88507e;
+}
+
+.section-content h4{
+ color: #75466c;
+ text-decoration: underline;
+ font-weight: bold;   
+}
+
+.section-content button{
+    width: 40%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #75466c;
+    font-weight: bold;
+}
+
+.section-content button:hover{
+    background-color: #75466c;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.col-4{
+    width: 50%;
+    margin: 0 60px;
+}
+
+
+.review{
+    width: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.user-image{
+    width: 30%;
+    text-align: right;
+}
+
+.user-review{
+    width: 60%;
+    text-align: left;
+}
+
+.user-review h1{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.user-review p{
+    font-size: 18px;
+}
+.user-review h5{
+    margin: 0;
+    font-size: 15px;
+}
+
+
+
