@@ -154,12 +154,12 @@ input{
 }
 
 .flexbox{
-    padding-top: 5%;
+    padding-top: 0;
     padding-left: 5%;
     width: 95%;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     padding-bottom: 50px;
-    background-color: #fef4ea;
+    background-color: #fff9e1;
     /* background-color: blue; */
 }
 .flexbox-content{
@@ -341,9 +341,3 @@ input{
     margin-top: 0;
     color: gray;
 }
-
-
-
-
-
-
