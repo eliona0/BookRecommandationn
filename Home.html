@@ -4,52 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <div class="navbar">
-        <img src="./images/logo.webp" alt="logo">
-        <a class="a1" href="#"><em>Bookaxy</em></a>
+        <img src="./images/logo.jpg" alt="logo">
+        <a style="font-size: 22px;" class="a1" href="#"><em>Bookaxy</em></a>
     
     <div class="links">
-        <a href="#">Genres</a>
+        <div class="dropdown">
+        <a href="#">Fiction</a><br>
+                 <div class="dropdown-content">
+                    <a href="#">Mystery</a>
+                    <a href="#">Thriller</a>
+                    <a href="#">Fantasy</a>
+                    <a href="#">Romance</a>
+                    <a href="#">Horror</a>
+                    <a href="#">Adventure</a>
+                    <a href="#">Science Fiction (Sci-Fi)</a>
+                    <a href="#">Historical Fiction </a>
+                    <a href="#">Young Adult (YA)</a>
+                </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">NonFiction</a><br>
+                     <div class="dropdown-content">
+                        <a href="#">Biography/Autobiography</a>
+                        <a href="#">Memoir</a>
+                        <a href="#">Self-Help</a>
+                        <a href="#">History</a>
+                        <a href="#">Science & Nature</a>
+                        <a href="#">True Crime</a>
+                        <a href="#">Philosophy</a>
+                        <a href="#">Travel </a>
+                        <a href="#">Cooking/Food</a>
+                        <a href="#">Business/Finance</a>
+
+                    </div>
+            </div>
         <a href="#">Favourites</a>
         <a href="#">Contact Us</a>
-        <a href="#">Log In</a>
+        <div class="login">
+        <a href="#">Log In</a></div>
         <a href="#">My Cart</a>
         
     </div>
 </div>
-<div class="header">
+<div class="header" style="background-image: url('images/header2.webp');" >
     <div class="header-content">
-    <h1>Discover Your Next Book...</h1>
+        <h1>"Reading is essential for those who seek to rise above the ordinary." – Jim Rohn</h1>
+        <!-- <h1>Bestsellers, Classics, and More - All in One Place</h1> -->
+    <!-- <h1>Discover Your Next Book...</h1> -->
     <div class="search">
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search by title or author...">
         <button type="submit"><img src="./images/search.png" alt="search "></button>
     </div>
 </div>
 </div>
 <div class="flexbox">
-    <h2>Best Sellers</h2>
-<div class="flexbox-content">
-    <div class="flexbox-item">
-        <div class="img">
-        <img src="./images/uglylove.jfif" alt="ugly love">
+    <h2 style="color: coral; font-size: 30px;">Best Sellers</h2>
+    <div class="flexbox-content">
+        <div class="flexbox-item">
+        <div class="the80">
+            <div class="img">
+            <img src="./images/bestSellers1.webp" alt="Main Street Millionaire">
+        </div>
+        <div class="book-info">
+        <h3>Main Street Millionaire: How to Make Extraordinary Wealth...</h3>
+        <p>Codie Sanchez</p>
+        <h5>$27.90</h5>
+        </div>
     </div>
-        <h2><em>Ugly Love</em></h2>
-        <h3>By: Colleen Hoover</h3>
-        <div class="buttons">
-        <button type="submit">Audiobook</button>
-        <button type="submit">Buy</button>
+        <div class="add-to-cart">
+            <button type="submit">ADD TO CART</button>
         </div>
     </div>
 
-
-    <div class="flexbox">
-        <h2>Best Sellers</h2>
-    <div class="flexbox-content">
-        <div class="flexbox-item">
+    <div class="flexbox-item">
+        <div class="the80">
             <div class="img">
-            <img src="./images/uglylove.jfif" alt="ugly love">
+            <img src="./images/bestSellers2.webp" alt="Everything Is Tuberculosis">
+        </div>
+        <div class="book-info">
+            <h3>Everything Is Tuberculosis (Signed Edition): The History and...</h3>
+            <p>John Green</p>
+            <h5>$26.04</h5>
+            </div>
+        </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="flexbox-item">
+            <div class="the80">
+            <div class="img">
+            <img src="./images/bestSellers3.webp" alt="Foxhole">
+        </div>
+        <div class="book-info">
+            <h3>Foxhole</h3>
+            <p>George K. Mullins</p>
+            <h5>$11.16</h5>
+            </div>
+        </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+
+        <div class="flexbox-item">
+            <div class="the80"> 
+            <div class="img">
+            <img src="./images/bestSellers4.jpg" alt="The Serviceberry">
+        </div>
+        <div class="book-info">
+            <h3>The Serviceberry: Abundance and Reciprocity in the Natural World</h3>
+            <p>Robin Wall Kimmerer</p>
+            <h5>$23.94</h5>
+            </div>
+        </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+
+        <div class="flexbox-item">
+            <div class="the80">
+            <div class="img">
+                <img src="./images/bestSellers5.jpg" alt="The Message">
+            </div>
+            <div class="book-info">
+                <h3>The Message</h3>
+                <p>Ta-Nehisi Coates</p>
+                <h5>$18.60</h5>
+            </div>
+        </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="flexbox-item">
+            <div class="the80">
+                <div class="img">
+                    <img src="./images/bestSellers6.webp" alt="Orbital">
+                </div>
+                <div class="book-info">
+                    <h3>Orbital: A Novel (Booker Prize Winner)</h3>
+                    <p>Samantha Harvey</p>
+                    <h5>$27.90</h5>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="flexbox-item">
+            <div class="the80">
+                <div class="img">
+                    <img src="./images/bestSellers7.webp" alt="By Heart">
+                </div>
+                <div class="book-info">
+                    <h3>By Heart: Recipes to Hold Near and Dear</h3>
+                    <p>Hailee Catalano</p>
+                    <h5>$15.81</h5>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="flexbox-item">
+            <div class="the80">
+            <div class="img">
+            <img src="./images/bestSellers8.webp" alt="Stem for All">
+        </div>
+        <div class="book-info">
+            <h3>Stem for All: How to Connect, Create, and Cultivate Stem...</h3>
+            <p>Leena Bakshi McLean</p>
+            <h5>$27.90</h5>
+            </div>
+        </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+
+        <div class="flexbox-item">
+            <div class="the80">
+            <div class="img">
+            <img src="./images/bestSellers9.jpg" alt="Democracy in Retrograde">
+        </div>
+        <div class="book-info">
+            <h3>Democracy in Retrograde: How to Make Changes Big ...</h3>
+            <p>Emily Amick and Sami Sage</p>
+            <h5>$26.96</h5>
+            </div>
+        </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+
+        <div class="flexbox-item">
+            <div class="the80">
+            <div class="img">
+            <img src="./images/bestSellers10.jpg" alt="Let This Radicalize You">
+        </div>
+        <div class="book-info">
+            <h3>Let This Radicalize You: Organizing and the Revolution of...</h3>
+            <p>Kelly Hayes and Mariame Kaba</p>
+            <h5>$16.69</h5>
+            </div>
+        </div>
+            <div class="add-to-cart">
+                <button type="submit">ADD TO CART</button>
+            </div>
+        </div>
+
+        <!-- <div class="flexbox-item">
+            <div class="img">
+            <img src="./images/bestSellers5.jpg" alt="ugly love">
         </div>
             <h2><em>Ugly Love</em></h2>
             <h3>By: Colleen Hoover</h3>
@@ -57,12 +238,10 @@
             <button type="submit">Audiobook</button>
             <button type="submit">Buy</button>
             </div>
-        </div>
+        </div> -->
+</div>
+</div>
 
-    
-  
-</div>
-</div>
     
 </body>
 </html>
