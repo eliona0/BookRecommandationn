@@ -44,9 +44,11 @@
             </div>
         <a href="#">Favourites</a>
         <a href="#">Contact Us</a>
-        <div class="login">
-        <a href="#">Log In</a></div>
-        <a href="#">My Cart</a>
+        <a href="MyCart.html">My Cart</a>
+        <!-- <div class="login"> -->
+        <button type="button" onclick="openLogin()">Log In</button>
+    <!-- </div> -->
+        
         
     </div>
 </div>
@@ -186,7 +188,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button type="submit">ADD TO CART</button>
+            <button type="submit" onclick="addToCart()">ADD TO CART</button>
         </div>
     </div>
 
@@ -370,6 +372,62 @@
             </div>
         </div>
     </div>
+
+    <div id="login-box">
+        <div class="login-container">
+            <form class="form">
+                <label>Log In</label>
+                <img class="LoginIcon" src="./images/loginiconn.png" alt="Log In Icon">
+            <div class="username-password">
+                <input type="username" name="Username" class="form-input" placeholder="Username">
+                <img src="./images/username.jpg" alt="Username Icon">
+            </div>
+            <div class="username-password">
+                <input type="password" name="Password" class="form-input" placeholder="Password">
+                <img src="./images/password.jpg" alt="Password Icon">
+            </div>
+                <p>Dont Have An Account?</p>
+                <button type="button" onclick="openSignUp()">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+  
+
+<div id="signup-box">
+<div class="signin-container">
+    <form class="form">
+        <label class="label1">Sign In</label>
+        <div class="klientsdata">
+            <input type="text" name="Name" class="form-input" placeholder="Name" required>
+        </div>
+        <div class="klientsdata">
+            <input type="text" name="Surname" class="form-input" placeholder="Surname" required>
+        </div>
+        <div class="klientsdata">
+            <input type="email" name="Email" class="form-input" placeholder="Email" required>
+        </div>
+        <div class="klientsdata">
+            <input type="password" name="Password" class="form-input" placeholder="Password" required>
+        </div>
+        <div class="klientsdata">
+            <input type="password" name="Confirm Password" class="form-input" placeholder="Confirm Password" required>
+        </div>
+        <div class="klientsdata">
+            <input type="number" name="Phone number" class="form-input" placeholder="Phone number" required>
+        </div>
+        <label class="label2">
+            <input type="checkbox" style="width: 20px;">I have read and agree to the Terms of Service and Privacy Policy.
+        </label>
+        <button onclick="openSignUp()">Sign Up</button>
+    </form>
+</div>
+</div>
+
+  <script src="home.js">
+    </script>
+    <script src="mycart.js">
+    </script>
     
 </body>
 </html>
