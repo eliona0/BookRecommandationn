@@ -26,24 +26,18 @@ body{
     z-index: 1;
 
     button{
-        /* background-color: #e38c52;
-        height: 35px;
-        font-weight: 600;
-        border-radius: 20px;
-        color: white;
-        border: 2px solid #e38c52;
-        margin-top: 1%;
-        justify-items: center;
-        text-align: center; */
-        width: 150px;
-        height: 40px;
-        background-color: #e38c52;
+        background-color: transparent;
+        font-family: none;
+        color: #e38c52;
         border: none;
-        border-radius: 5px;
-        color: white;
+        font-weight: 600;
         font-size: 20px;
-        font-weight: bold;
-        font-family:'Times New Roman', Times, serif;
+        padding: 10px;
+
+    }
+    
+    button:hover{
+        text-decoration: underline;
     }
 }
 
@@ -394,6 +388,23 @@ input{
     padding: 30px;
     justify-content: space-between;
     background-color: #ffcbca;
+
+    button{
+        width: 40%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #75466c;
+    font-weight: bold;
+    }
+
+    button:hover{
+        background-color: #75466c;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    }
     
 }
 
@@ -408,22 +419,6 @@ input{
  font-weight: bold;   
 }
 
-.section-content button{
-    width: 40%;
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-    font-size: 15px;
-    color: #75466c;
-    font-weight: bold;
-}
-
-.section-content button:hover{
-    background-color: #75466c;
-    font-size: 15px;
-    color: white;
-    font-weight: bold;
-}
 
 .col-4{
     width: 50%;
@@ -507,7 +502,7 @@ input{
         padding-right: 30%;
     }
 
-    button{
+    /* button{
         width: 150px;
         height: 40px;
         background-color: #e38c52;
@@ -518,6 +513,32 @@ input{
         font-weight: bold;
         font-family:'Times New Roman', Times, serif;
     
+    } */
+
+    button{
+        margin-left: 5px;
+        width: 40%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
     }
 
     a{
@@ -588,6 +609,7 @@ label{
     background-color: rgba(0,0,0,0.80); 
    
 }
+
 .signin-container{
     
     background-image: url("./images/login-libri.jpg");
@@ -607,23 +629,37 @@ label{
     }
 
     button{
-        width: 150px;
-        height: 40px;
+        margin-left: 5px;
+        width: 40%;
         background-color: #e38c52;
-        border: none;
-        border-radius: 5px;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
         color: white;
-        font-size: 20px;
-        font-weight: bold;
-        font-family:'Times New Roman', Times, serif;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
     
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
     }
 
     a{
     text-decoration: none;
     color: white;
+    }
 }
-}
+
 
 .label1{
     color: white;
@@ -799,7 +835,9 @@ label{
     /* background-color: aqua; */
 
     button{
-        /* background-color: #e38c52;
+        margin-left: 5px;
+        width: 30%;
+        background-color: #e38c52;
         height: 35px;
         font-weight: 600;
         border-radius: 20px;
@@ -807,16 +845,19 @@ label{
         border: 2px solid #e38c52;
         margin-top: 1%;
         justify-items: center;
-        text-align: center; */
-        width: 150px;
-        height: 40px;
-        background-color: #e38c52;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        font-family:'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
     }
 
    

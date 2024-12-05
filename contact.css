@@ -11,19 +11,23 @@ body{
     background-color: white;
     justify-content: center;
     align-items: center;
+    align-content: center;
     position: fixed;
     z-index: 1;
 
     button{
-        width: 150px;
-        height: 40px;
-        background-color: #e38c52;
+        background-color: transparent;
+        font-family: none;
+        color: #e38c52;
         border: none;
-        border-radius: 5px;
-        color: white;
+        font-weight: 600;
         font-size: 20px;
-        font-weight: bold;
-        font-family:'Times New Roman', Times, serif;
+        padding: 10px;
+
+    }
+    
+    button:hover{
+        text-decoration: underline;
     }
 }
 
@@ -238,14 +242,29 @@ margin: auto;
         border-bottom: 1px solid #ccc;
     }
     button{
-        padding: 10px 16px; 
-        background-color: #e38c52; 
-        color: white; 
-        border: none; 
-        border-radius: 4px; 
-        cursor: pointer; 
-        height: 35px; 
+        margin-left: 5px;
         width: 30%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
     }
     
     
@@ -285,7 +304,7 @@ margin: auto;
         padding-right: 30%;
     }
 
-    button{
+    /* button{
         width: 150px;
         height: 40px;
         background-color: #e38c52;
@@ -296,6 +315,32 @@ margin: auto;
         font-weight: bold;
         font-family:'Times New Roman', Times, serif;
     
+    } */
+
+    button{
+        margin-left: 5px;
+        width: 40%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
     }
 
     a{
@@ -382,7 +427,7 @@ margin: auto;
         padding-right: 30%;
     }
 
-    button{
+    /* button{
         width: 150px;
         height: 40px;
         background-color: #e38c52;
@@ -393,6 +438,32 @@ margin: auto;
         font-weight: bold;
         font-family:'Times New Roman', Times, serif;
     
+    } */
+
+    button{
+        margin-left: 5px;
+        width: 40%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
     }
 
     a{
@@ -538,14 +609,29 @@ margin: auto;
     /* background-color: aqua; */
 
     button{
-        padding: 10px 16px; 
-        background-color: #e38c52; 
-        color: white; 
-        border: none; 
-        border-radius: 4px; 
-        cursor: pointer; 
-        height: 35px; 
+        margin-left: 5px;
         width: 30%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
     }
 }
 

@@ -21,3 +21,13 @@ function openSignUp(){
         signupBox.style.display='none';
     }
 }
+
+function openBestSellers1(){
+    const myCardItem = document.getElementById('BestSellers1');
+    if(myCardItem.style.display==='none'){
+        myCardItem.style.display='block';
+    }
+    else{
+        myCardItem.style.display='none';
+    }
+}

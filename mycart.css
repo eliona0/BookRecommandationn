@@ -1,4 +1,141 @@
+body{
+    margin: 0;
+
+}
+.navbar{
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+
+    button{
+        background-color: transparent;
+        font-family: none;
+        color: #e38c52;
+        border: none;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 10px;
+
+    }
+    
+    button:hover{
+        text-decoration: underline;
+    }
+}
+
+.navbar a{
+    font-size: 20px;
+    text-decoration: none;
+    /* color: rgb(130, 158, 206); */
+    color: #e38c52;
+    margin: 8px;
+    
+}
+
+.navbar a:hover{
+    /* color: rgb(130, 158, 206); */
+    color: #e38c52;
+}
+.a1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  
+}
+.navbar img{
+    width: 50px;
+    height: auto;
+    margin: 0px 15px;
+    border-radius: 100%;
+}
+.links{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+
+}
+
+.links a{
+    color:black;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+}
+
+.login a{
+    margin: 0;
+    color: #e38c52;
+}
+
+.dropdown{
+    display: flex;
+    text-align: center;
+}
+
+/* .dropdown a{
+    background-color: #e38c52;
+} */
+
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: white;
+	color: black;
+	box-shadow: 0px 8px 16px 0px rgb(0,0,0.2);
+	border-top: 2px solid #e38c52;
+	z-index: 1;	
+    min-width: 300px;
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+    margin-top: 40px;
+}
+
+.dropdown-content a{
+	width:100%;
+	height:25px;
+	float: none;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	color: black;
+    margin: 10px;
+}
+
+.dropdown-content a:hover{
+	color: #e38c52;
+    text-decoration: none;
+}
+
+input{
+    width: 400px ;
+    height: 40px;
+    border: none;
+    padding-left: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
 .my-cart-container{
+    margin-top: 0;
     width: 100%;
     /* height: 500px; */
     justify-items: center;
@@ -12,6 +149,9 @@
 
 }
 .my-cart-item{
+    
+    /* position: relative; */
+    display: flex;
     /* background-color: blue; */
     width: 100%;
     height: fit-content;
@@ -27,6 +167,10 @@
     margin-top: 30px;
 
 }
+
+/* #bestSellers1{
+    display: none;
+} */
 .my-cart-image{
     /* background-color: blueviolet; */
     width:15%;
@@ -44,6 +188,9 @@
     width: 75%;
     padding: 20px;
     /* background-color: burlywood; */
+    h5{
+        font-size: large;
+    }
 }
 .cart-buttons{
     display: block;
@@ -63,7 +210,6 @@
 }
 
 #buy:hover{
-    width: 30%;
     background-color: white;
     height: 35px;
     font-weight: 600;
@@ -75,6 +221,375 @@
     text-align: center;
 }
 #read-more{
+    width: 125px;
     background-color: none;
+    border: #e38c52;
+    color: #e38c52;
+    height: 35px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: underline;
+    border-radius: 20px;
+
+}
+
+#read-more:hover{
+    background-color: white;
+    border:1px solid #e38c52;
+    color: #e38c52;
+    height: 35px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: underline;
+    border-radius: 20px;
+
+}
+
+
+#login-box{
+    z-index: 3;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+    background-color: rgba(0,0,0,0.80); 
+}
+.login-container{
+    background-image: url("./images/login-libri.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 65%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+
+    p{
+        color: white;
+        font-size: 15px;
+        padding-right: 30%;
+    }
+
+    /* button{
+        width: 150px;
+        height: 40px;
+        background-color: #e38c52;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        font-family:'Times New Roman', Times, serif;
+    
+    } */
+
+    button{
+        margin-left: 5px;
+        width: 40%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+
+    a{
+    text-decoration: none;
+    color: white;
+    }
+}
+.form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-left: 50%;
+    padding: 20px;
+    
+}
+label{
+    color: white;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    font-size:30px ;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.username-password{
+    display: flex;
+    width: 100%;
+    height:30px;
+    border-radius: 5px;
     border: none;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-bottom: 8px;
+    justify-content: center;
+}
+.form-input{
+    border: none;
+    padding-left: 10px;
+}
+.username-password img{
+    width: 30px;
+    height: 30px;
+}
+.LoginIcon{
+    width: 40%;
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+
+
+
+
+
+
+#signup-box{
+    z-index: 4;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+    background-color: rgba(0,0,0,0.80); 
+   
+}
+
+.signin-container{
+    
+    background-image: url("./images/login-libri.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 65%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+
+    p{
+        color: white;
+        font-size: 15px;
+        padding-right: 30%;
+    }
+
+    button{
+        margin-left: 5px;
+        width: 40%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+
+    a{
+    text-decoration: none;
+    color: white;
+    }
+}
+
+
+.label1{
+    color: white;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    font-size:30px ;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.label2{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    width: auto;
+    margin-top: 15px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+.klientsdata{
+    display: flex;
+    width: 100%;
+    height:30px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+.form-input{
+    border: none;
+    padding-left: 10px;
+}
+
+.klientsdata img{
+    width: 30px;
+    height: 30px;
+}
+.LoginIcon{
+    width: 40%;
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    justify-items: center;
+    text-align: center;
+    align-content:flex-start;
+    background-color: hsl(0, 2%, 87%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer-content{
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #e38c52;
+}
+
+.inner-element-wider{
+    width: 25%;
+    height: 250px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.site-name{
+    display: flex;
+    width: 80%;
+    height: 15%;
+    /* justify-content: space-around; */
+
+    a{
+        
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: none;
+        /* color: rgb(130, 158, 206); */
+        color: #e38c52;
+        margin: 8px;
+    }
+
+    img{
+        border-radius: 100px;
+    }
+}
+
+.site-description{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    height: 100%;
+}
+
+.socials{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner-element{
+    width: 20%;
+    height: 250px;
+    text-align: left;
+    padding-left: 20px;
+    /* background-color: blueviolet; */
+}
+
+.for-email{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* background-color: aqua; */
+
+    button{
+        margin-left: 5px;
+        width: 30%;
+        background-color: #e38c52;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+    
+    button:hover{
+        background-color: white;
+        height: 35px;
+        font-weight: 600;
+        border-radius: 20px;
+        color: #e38c52;
+        border: 2px solid #e38c52;
+        margin-top: 1%;
+        justify-items: center;
+        text-align: center;
+    }
+
+   
+}
+
+.copyright{
+    text-align: left;
+    width: 77%; 
+    font-size: 16px; 
+    height: 80px;
 }
