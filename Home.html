@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bookaxy</title>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
@@ -43,7 +43,7 @@
                     </div>
             </div>
         <a href="#">Favourites</a>
-        <a href="#">Contact Us</a>
+        <a href="ContactUs.html">Contact Us</a>
         <a href="MyCart.html">My Cart</a>
         <!-- <div class="login"> -->
         <button type="button" onclick="openLogin()">Log In</button>
@@ -52,9 +52,11 @@
         
     </div>
 </div>
+
+
 <div class="header" style="background-image: url('images/header2.webp');" >
     <div class="header-content">
-        <h1>"Reading is essential for those who seek to rise above the ordinary." – Jim Rohn</h1>
+        <h1>"Reading is essential for those who seek to rise above the ordinary." - Jim Rohn</h1>
         <!-- <h1>Bestsellers, Classics, and More - All in One Place</h1> -->
     <!-- <h1>Discover Your Next Book...</h1> -->
     <div class="search">
@@ -258,7 +260,7 @@
             </div>
         </div>
 
-        <div class="flexbox-item">
+        <!--<div class="flexbox-item">
             <div class="the80">
                 <div class="img">
                     <img src="./images/bestSellers6.webp" alt="Orbital">
@@ -338,7 +340,7 @@
             <div class="add-to-cart">
                 <button type="submit">ADD TO CART</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="flexbox-item">
             <div class="img">
@@ -358,7 +360,9 @@
     <div class="review">
         <div class="section-content" style="background-color: white;">
             <div class="user-image">
-                <img style="border-radius: 100%; width: 40%;" src="./images/Emily R..webp" >
+                <div class="user-image-img">
+                <img src="./images/Emily R..webp" >
+            </div>
             </div>
             <div class="user-review">
                 <h1>Great Book Review Experience!</h1>
@@ -379,12 +383,14 @@
                 <label>Log In</label>
                 <img class="LoginIcon" src="./images/loginiconn.png" alt="Log In Icon">
             <div class="username-password">
-                <input type="username" name="Username" class="form-input" placeholder="Username">
-                <img src="./images/username.jpg" alt="Username Icon">
+                <input type="username" name="Username" class="form-input" placeholder="Username"
+                style="background-image: url(./images/user.png); background-repeat: no-repeat; background-position: right; background-size: contain;">
+                <!-- <img src="./images/user.png" alt="Username Icon"> -->
             </div>
             <div class="username-password">
-                <input type="password" name="Password" class="form-input" placeholder="Password">
-                <img src="./images/password.jpg" alt="Password Icon">
+                <input type="password" name="Password" class="form-input" placeholder="Password"
+                style="background-image: url(./images/padlock.png); background-repeat: no-repeat; background-position: right; background-size: contain;">
+                <!-- <img src="./images/padlock.png" alt="Password Icon"> -->
             </div>
                 <p>Dont Have An Account?</p>
                 <button type="button" onclick="openSignUp()">Sign In</button>
@@ -422,6 +428,85 @@
         <button onclick="openSignUp()">Sign Up</button>
     </form>
 </div>
+</div>
+
+
+
+<div class="last-section-wrapper">
+    <div class="last-section">
+        <div class="last-section-card">
+            <div class="main-part">
+                <img src="./images/store.png">
+                <h3>268</h3>
+            </div>
+            <p>Our stores around the world</p>
+        </div>
+        <div class="last-section-card">
+            <div class="main-part">
+                <img src="./images/customer.png">
+                <h3>25,634</h3>
+            </div>
+            <p>Our happy costumers</p>
+        </div>
+        <div class="last-section-card">
+            <div class="main-part">
+                <img src="./images/bookk.png">
+                <h3>68+k</h3>
+            </div>
+            <p>Book Collections</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="footer-content">
+        <div class="inner-element-wider">
+            <div class="site-name">
+                <img src="./images/logo.jpg" alt="logo">
+                <a style="font-size: 22px;" class="a1" href="#"><em>Bookaxy</em></a>
+            </div>
+
+            <div class="site-description">
+                <p>Bookaxy is a online bookstore website that sells all genres of books from around the world. Find your book here now.</p>
+                <h3>Follow Us</h3>
+                <div class="socials">
+                    <a href="#"><img src="./images/facebook.png" style="width: 30px; height: auto;"></a>
+                    <a href="#"><img src="./images/instagram.png" style="width: 30px; height: auto;"></a>
+                    <a href="#"><img src="./images/linkedin.png" style="width: 30px; height: auto;"></a>
+                    <a href="#"><img src="./images/twitter.png" style="width: 30px; height: auto;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="inner-element">
+            <h3>Links</h3>
+
+            <p>Favorites</p>
+            <p>Contact Us</p>
+            <p>Log In</p>
+        </div>
+        <div class="inner-element">
+            <h3>Customer Area</h3>
+
+            <p>My Account</p>
+            <p>My Cart</p>
+            <p>Terms</p>
+            <p>Privacy Plicy</p>
+        </div>
+        <div class="inner-element-wider">
+            <h3>Dont miss the newest books!</h3>
+            <p style="font-size: 14px;">Don't miss the newest books! Share your email to get updates on fresh releases and exclusive offers.</p>
+            <div class="for-email">
+                <input type="email" name="email" placeholder="Type your email here" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 20px; width: 70%;">
+                <button type="submit">Email</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p>Bookaxy - @ 2024 All Rights Reserved</p>
+    </div>
 </div>
 
   <script src="home.js">

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookaxy</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="./images/logo.jpg" alt="logo">
+        <a style="font-size: 22px;" class="a1" href="Home.html"><em>Bookaxy</em></a>
+    
+    <div class="links">
+        <div class="dropdown">
+        <a href="#">Fiction</a><br>
+                 <div class="dropdown-content">
+                    <a href="#">Mystery</a>
+                    <a href="#">Thriller</a>
+                    <a href="#">Fantasy</a>
+                    <a href="#">Romance</a>
+                    <a href="#">Horror</a>
+                    <a href="#">Adventure</a>
+                    <a href="#">Science Fiction (Sci-Fi)</a>
+                    <a href="#">Historical Fiction </a>
+                    <a href="#">Young Adult (YA)</a>
+                </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">NonFiction</a><br>
+                     <div class="dropdown-content">
+                        <a href="#">Biography/Autobiography</a>
+                        <a href="#">Memoir</a>
+                        <a href="#">Self-Help</a>
+                        <a href="#">History</a>
+                        <a href="#">Science & Nature</a>
+                        <a href="#">True Crime</a>
+                        <a href="#">Philosophy</a>
+                        <a href="#">Travel </a>
+                        <a href="#">Cooking/Food</a>
+                        <a href="#">Business/Finance</a>
+
+                    </div>
+            </div>
+        <a href="#">Favourites</a>
+        <a href="#" style="color: #e38c52; font-weight: 600;">Contact Us</a>
+        <a href="MyCart.html">My Cart</a>
+        <!-- <div class="login"> -->
+        <button type="button" onclick="openLogin()">Log In</button>
+    <!-- </div> -->
+    </div>
+</div>
+
+    <div class="contact-us">
+        <div class="contact-us-content">
+            <div class="contact-us-header">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Please use the form below to get in touch.</p>   
+            </div>
+            <div class="contact-form">
+                    <form>
+                        <div class="contact-us-rows">
+                            <div class="label-input">
+                                <p><label for="name">Name</label></p>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="label-input">
+                                <p><label for="email">Email</label></p>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-us-rows">
+                            <div class="label-input">
+                                <p><label for="phone">Phone Number</label></p>
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                            </div>
+                            <div class="label-input"> 
+                                <p><label for="subject">Subject</label></p>
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-us-rows">
+                            <div class="message-label-input">
+                                <p><label for="message">Message</label></p>
+                                <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+                                <button type="submit" style="margin: 20px auto;">Send Message</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="login-box">
+        <div class="login-container">
+            <form class="form">
+                <label>Log In</label>
+                <img class="LoginIcon" src="./images/loginiconn.png" alt="Log In Icon">
+            <div class="username-password">
+                <input type="username" name="Username" class="form-input" placeholder="Username"
+                style="background-image: url(./images/user.png); background-repeat: no-repeat; background-position: right; background-size: contain;">
+                <!-- <img src="./images/user.png" alt="Username Icon"> -->
+            </div>
+            <div class="username-password">
+                <input type="password" name="Password" class="form-input" placeholder="Password"
+                style="background-image: url(./images/padlock.png); background-repeat: no-repeat; background-position: right; background-size: contain;">
+                <!-- <img src="./images/padlock.png" alt="Password Icon"> -->
+            </div>
+                <p>Dont Have An Account?</p>
+                <button type="button" onclick="openSignUp()">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+  
+
+<div id="signup-box">
+<div class="signin-container">
+    <form class="form">
+        <label class="label1">Sign In</label>
+        <div class="klientsdata">
+            <input type="text" name="Name" class="form-input" placeholder="Name" required>
+        </div>
+        <div class="klientsdata">
+            <input type="text" name="Surname" class="form-input" placeholder="Surname" required>
+        </div>
+        <div class="klientsdata">
+            <input type="email" name="Email" class="form-input" placeholder="Email" required>
+        </div>
+        <div class="klientsdata">
+            <input type="password" name="Password" class="form-input" placeholder="Password" required>
+        </div>
+        <div class="klientsdata">
+            <input type="password" name="Confirm Password" class="form-input" placeholder="Confirm Password" required>
+        </div>
+        <div class="klientsdata">
+            <input type="number" name="Phone number" class="form-input" placeholder="Phone number" required>
+        </div>
+        <label class="label2" style=" color: white; font-weight: bold;font-size: 16px; width: auto; margin-top: 15px; margin-left: 30px; display: flex; align-items: center;">
+            <input type="checkbox" style="width: 20px;">I have read and agree to the Terms of Service and Privacy Policy.
+        </label>
+        <button onclick="openSignUp()">Sign Up</button>
+    </form>
+</div>
+</div>
+
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="inner-element-wider">
+                <div class="site-name">
+                    <img src="./images/logo.jpg" alt="logo">
+                    <a style="font-size: 22px;" class="a1" href="#"><em>Bookaxy</em></a>
+                </div>
+    
+                <div class="site-description">
+                    <p>Bookaxy is a online bookstore website that sells all genres of books from around the world. Find your book here now.</p>
+                    <h3>Follow Us</h3>
+                    <div class="socials">
+                        <a href="#"><img src="./images/facebook.png" style="width: 30px; height: auto;"></a>
+                        <a href="#"><img src="./images/instagram.png" style="width: 30px; height: auto;"></a>
+                        <a href="#"><img src="./images/linkedin.png" style="width: 30px; height: auto;"></a>
+                        <a href="#"><img src="./images/twitter.png" style="width: 30px; height: auto;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="inner-element">
+                <h3>Links</h3>
+    
+                <p>Favorites</p>
+                <p>Contact Us</p>
+                <p>Log In</p>
+            </div>
+            <div class="inner-element">
+                <h3>Customer Area</h3>
+    
+                <p>My Account</p>
+                <p>My Cart</p>
+                <p>Terms</p>
+                <p>Privacy Plicy</p>
+            </div>
+            <div class="inner-element-wider">
+                <h3>Dont miss the newest books!</h3>
+                <p style="font-size: 14px;">Don't miss the newest books! Share your email to get updates on fresh releases and exclusive offers.</p>
+                <div class="for-email">
+                    <input type="email" name="email" placeholder="Type your email here" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 20px; width: 70%;">
+                    <button type="submit">Email</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>Bookaxy - @ 2024 All Rights Reserved</p>
+        </div>
+    </div>
+    
+    <script src="home.js">
+    </script>
+    <script src="mycart.js">
+    </script>
+</body>
+</html>
