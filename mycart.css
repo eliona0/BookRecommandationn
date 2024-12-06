@@ -209,6 +209,34 @@ input{
     text-align: center;
 }
 
+.double-buttons button:last-child{
+    border-radius: 20px; 
+    color: #e38c52; 
+    width: 30%;
+    background-color: white;
+    height: 35px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid #e38c52;
+    margin-top: 1%;
+    justify-items: center;
+    text-align: center;
+}
+
+.double-buttons button:last-child:hover{
+
+    width: 30%;
+    background-color: #e38c52;
+    height: 35px;
+    font-weight: 600;
+    border-radius: 20px;
+    color: white;
+    border: 2px solid #e38c52;
+    margin-top: 1%;
+    justify-items: center;
+    text-align: center;
+}
+
 #buy:hover{
     background-color: white;
     height: 35px;
