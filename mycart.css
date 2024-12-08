@@ -376,10 +376,12 @@ label{
     font-size: 15px;
     margin-bottom: 8px;
     justify-content: center;
+    padding-top: 7px;
 }
 .form-input{
     border: none;
     padding-left: 10px;
+    border-radius: 4px;
 }
 .username-password img{
     width: 30px;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookaxy</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contactus.css">
     <!-- <link rel="stylesheet" href="home.css"> -->
 </head>
 <body>
@@ -44,7 +44,6 @@
 
                     </div>
             </div>
-        <a href="Blogs.html">Blogs</a>
         <a href="#" style="color: #e38c52; font-weight: 600;">Contact Us</a>
         <a href="MyCart.html">My Cart</a>
         <!-- <div class="login"> -->
@@ -87,7 +86,7 @@
                             <div class="message-label-input">
                                 <p><label for="message">Message</label></p>
                                 <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
-                                <button type="submit" style="margin: 20px auto;">Send Message</button>
+                                <button type="button" style="margin: 20px auto;" id="message-btn">Send Message</button>
                             </div>
                         </div>
                         
@@ -112,7 +111,8 @@
                 <!-- <img src="./images/padlock.png" alt="Password Icon"> -->
             </div>
                 <p>Dont Have An Account?</p>
-                <button type="button" onclick="openSignUp()">Sign In</button>
+                <button type="button" onclick="openSignUp()">Sign Up</button>
+                <button type="button" onclick="openLogin()" id="login-btn">Log in</button>
             </form>
         </div>
     </div>
@@ -144,8 +144,7 @@
             <label class="label2">
                 <input type="checkbox" style="width: 20px;">I have read and agree to the Terms of Service and Privacy Policy.
             </label>
-            <button type="button" onclick="openSignUp()">Sign Up</button>
-            <button type="button" onclick="openLogin()">Log in</button>
+            <button type="button" onclick="openLogin()">Sign In</button>
         </form>
         </div>
         </div>
