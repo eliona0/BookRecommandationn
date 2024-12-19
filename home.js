@@ -23,6 +23,32 @@ function openSignUp(){
     }
 }
 
+// script.js
+document.querySelector('.hamburger-menu').addEventListener('click', function () {
+    const menuLinks = document.querySelector('.links');
+    
+    if (menuLinks.style.display === 'none' || menuLinks.style.display === '') {
+        menuLinks.style.display = 'block';
+        menuLinks.style.width = '100%'; 
+        menuLinks.style.height = 'fit-content'; 
+        menuLinks.style.position = 'absolute'; 
+        menuLinks.style.top = '-70px'; 
+        menuLinks.style.left = '0'; 
+        menuLinks.style.backgroundColor = 'white'; 
+        menuLinks.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.1)'; 
+        menuLinks.style.zIndex = '1000'; 
+        menuLinks.style.top = '70px'; 
+        menuLinks.style.justifyItems = 'center'; 
+        menuLinks.style.paddingBottom = '20px'; 
+    } else {
+        menuLinks.style.display = 'none'; 
+    }
+});
+
+
+
+
+
 //function openBestSellers1(){
     // const myCardItem = document.getElementById('BestSellers1');
     // // if(myCardItem.style.display==='none'){
