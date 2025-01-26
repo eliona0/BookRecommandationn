@@ -453,3 +453,78 @@ const messageValid= (message) =>{
 
 submit.addEventListener('click', validate);
 });
+
+
+
+
+
+
+
+const carousel = document.querySelector(".carousel");
+const slides = document.querySelectorAll(".section-content");
+const totalSlides = slides.length-1;
+const dotsContainer = document.querySelector(".carousel-dots");
+
+let currentSlide = 0;
+let autoSlideInterval; // Variable for auto-sliding interval
+
+// Function to create navigation dots
+function createDots() {
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement("button");
+        dot.addEventListener("click", () => {
+            goToSlide(i); // Go to specific slide
+            resetAutoSlide(); // Reset auto-sliding
+        });
+        dotsContainer.appendChild(dot);
+    }
+    updateDots();
+}
+
+// Function to update dot states
+function updateDots() {
+    const dots = dotsContainer.querySelectorAll("button");
+    dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+    });
+}
+
+// Function to show a specific slide
+function showSlide(index) {
+    const offset = -index * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+    currentSlide = index;
+    updateDots();
+}
+
+// Function to navigate to a specific slide
+function goToSlide(index) {
+    showSlide(index);
+}
+
+// Function to move to the next slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to the first slide
+    showSlide(currentSlide);
+}
+
+// Function to start auto-sliding
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 3 seconds
+}
+
+// Function to reset auto-sliding
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval); // Stop the interval
+    startAutoSlide(); // Restart the interval
+}
+
+// Initialize
+createDots();
+showSlide(currentSlide);
+startAutoSlide(); // Start automatic sliding
+
