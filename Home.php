@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: Login.php"); // Redirect to login if not logged in
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +54,7 @@
         <p><a href="ContactUs.html">Contact Us</a></p>
         <p><a href="MyCart.html">My Cart</a></p>
         <!-- <button type="button" onclick="openLogin()"><a href="Login.html">Log In</a></button> -->
+        <button type="button"><a href="logout.php">Logout</a></button>
     
         
         
