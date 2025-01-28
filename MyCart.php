@@ -7,50 +7,8 @@
     <link rel="stylesheet" href="mycart.css">
 </head>
 <body>
-    <div class="navbar">
-        <img src="./images/logo.jpg" alt="logo">
-        <a style="font-size: 22px;" class="a1" href="Home.php"><em>Bookaxy</em></a>
-    <div class="links">
-        <div class="dropdown">
-        <a href="Fiction.html">Fiction</a><br>
-                 <div class="dropdown-content">
-                    <a href="#">Mystery</a>
-                    <a href="#">Thriller</a>
-                    <a href="#">Fantasy</a>
-                    <a href="#">Romance</a>
-                    <a href="#">Horror</a>
-                    <a href="#">Adventure</a>
-                    <a href="#">Science Fiction (Sci-Fi)</a>
-                    <a href="#">Historical Fiction </a>
-                    <a href="#">Young Adult (YA)</a>
-                </div>
-        </div>
-        <div class="dropdown">
-            <a href="NonFiction.html">NonFiction</a><br>
-                     <div class="dropdown-content">
-                        <a href="#">Biography/Autobiography</a>
-                        <a href="#">Memoir</a>
-                        <a href="#">Self-Help</a>
-                        <a href="#">History</a>
-                        <a href="#">Science & Nature</a>
-                        <a href="#">True Crime</a>
-                        <a href="#">Philosophy</a>
-                        <a href="#">Travel </a>
-                        <a href="#">Cooking/Food</a>
-                        <a href="#">Business/Finance</a>
-
-                    </div>
-            </div>
-        <a href="ContactUs.html">Contact Us</a>
-        <a href="#" style="color: #e38c52; font-weight: 600;">My Cart</a>
-        <!-- <div class="login"> -->
-        <!-- <button type="button">Log In</button> -->
-    <!-- </div> -->
-    <button type="button"><a href="logout.php">Logout</a></button>
-     </div>
-     </div>
-        
-        
+<?php include 'Navbar.php';
+   ?>
 
     <div class="my-cart-container">
         <div class="my-cart-content">
@@ -190,55 +148,8 @@
     </div>
 </div>
 
-<div class="footer">
-    <div class="footer-content">
-        <div class="inner-element-wider">
-            <div class="site-name">
-                <img src="./images/logo.jpg" alt="logo">
-                <a style="font-size: 22px;" class="a1" href="#"><em>Bookaxy</em></a>
-            </div>
-
-            <div class="site-description">
-                <p>Bookaxy is a online bookstore website that sells all genres of books from around the world. Find your book here now.</p>
-                <h3>Follow Us</h3>
-                <div class="socials">
-                    <a href="#"><img src="./images/facebook.png" style="width: 30px; height: auto;"></a>
-                    <a href="#"><img src="./images/instagram.png" style="width: 30px; height: auto;"></a>
-                    <a href="#"><img src="./images/linkedin.png" style="width: 30px; height: auto;"></a>
-                    <a href="#"><img src="./images/twitter.png" style="width: 30px; height: auto;"></a>
-                </div>
-            </div>
-        </div>
-        <div class="inner-element">
-            <h3>Links</h3>
-
-            <p>Blogs</p>
-            <p>Contact Us</p>
-            <p>Log In</p>
-        </div>
-        <div class="inner-element">
-            <h3>Customer Area</h3>
-
-            <p>My Account</p>
-            <p>My Cart</p>
-            <p>Terms</p>
-            <p>Privacy Plicy</p>
-        </div>
-        <div class="inner-element-wider">
-            <h3>Dont miss the newest books!</h3>
-            <p style="font-size: 14px;">Don't miss the newest books! Share your email to get updates on fresh releases and exclusive offers.</p>
-            <div class="for-email">
-                <input type="email" name="email" placeholder="Type your email here" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 20px; width: 70%;">
-                <button type="submit">Email</button>
-            </div>
-        </div>
-        
-    </div>
-    <div class="copyright">
-        <p>Bookaxy - @ 2024 All Rights Reserved</p>
-    </div>
-</div>
-
+<?php include 'Footer.php';
+   ?>
 <script src="mycart.js"></script>
 </body>
 </html>
