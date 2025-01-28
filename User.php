@@ -12,7 +12,7 @@ class User {
 
         $stmt = $this->conn->prepare($query);
 
-        // Bind parameters
+
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':surname', $surname);
         $stmt->bindParam(':username', $username);
@@ -35,21 +35,87 @@ class User {
         $stmt->bindParam(':username', $username);
         $stmt->execute();
 
-        // Check if a record exists
+
         if ($stmt->rowCount() > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             if (password_verify($password, $row['password'])) {
-                // Password is correct
                 session_start();
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['username'] = $row['username'];
                 return true;
             } else {
-                // Debugging: Print password verification failure
                 echo "Password does not match.";
             }
         }
         return false;
     }
+
+    public function getAllUsers() {
+        $sql = "SELECT * FROM {$this->table_name}";
+        $statement = $this->conn->prepare($sql);
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC); 
+    }
+
+    
+    function getUserById($id) {
+        $conn = $this->conn; 
+    
+        $sql = "SELECT * FROM user WHERE id = :id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $user = $stmt->fetch();
+    
+        return $user;
+    }
+    
+
+    
+    public function updateUser($id, $name, $surname, $email, $username, $password = null) {
+        if ($password) {
+            $query = "UPDATE {$this->table_name} 
+                      SET name = :name, surname = :surname, email = :email, username = :username, password = :password 
+                      WHERE id = :id";
+        } else {
+            $query = "UPDATE {$this->table_name} 
+                      SET name = :name, surname = :surname, email = :email, username = :username 
+                      WHERE id = :id";
+        }
+    
+        $stmt = $this->conn->prepare($query);
+    
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':surname', $surname);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':username', $username);
+    
+        if ($password) {
+            $stmt->bindParam(':password', password_hash($password, PASSWORD_DEFAULT));
+        }
+    
+        return $stmt->execute();
+    }
+    
+
+    
+    public function deleteUser($id) {
+        if (empty($id)) {
+            return false;
+        }
+    
+        $query = "DELETE FROM {$this->table_name} WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            print_r($stmt->errorInfo());
+            return false;
+        }
+    }
+    
 }
 ?>

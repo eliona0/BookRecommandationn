@@ -127,22 +127,6 @@ if (!isset($_SESSION['user_id'])) {
     
 </div>
 
-<!-- <div class="section">
-    <div class="section-content">
-        <div class="col-4">
-        <h4>EDITOR CHOICE</h4>
-        <h1>Top 10 Books To Make It A Great Year</h1>
-        <button type="button">Shop Now</button>
-         </div>
-         <div class="col-4">
-            <img src="./images/section-image.jpg">
-         </div>
-    </div>
-</div> -->
-
-
-
-
 
 
 

@@ -1,28 +1,3 @@
-// function openLogin(){
-//     const loginBox = document.getElementById('login-box');
-//     const signupBox = document.getElementById('signup-box');
-//     if(loginBox.style.display==='none'){
-//         loginBox.style.display='block';
-//         signupBox.style.display='none';
-//     }
-//     else{
-//         loginBox.style.display='none';
-//     }
-// }
-
-
-// function openSignUp(){
-//     const loginBox = document.getElementById('login-box');
-//     const signupBox = document.getElementById('signup-box');
-//     if( signupBox.style.display === 'none'){
-//         signupBox.style.display='block';
-//         loginBox.style.display='none';
-//     }
-//     else{
-//         signupBox.style.display='none';
-//     }
-// }
-
 
 
 // document.querySelector('.hamburger-menu').addEventListener('click', function () {
@@ -136,22 +111,22 @@ const totalSlides = slides.length-1;
 const dotsContainer = document.querySelector(".carousel-dots");
 
 let currentSlide = 0;
-let autoSlideInterval; // Variable for auto-sliding interval
+let autoSlideInterval; 
 
-// Function to create navigation dots
+
 function createDots() {
     for (let i = 0; i < totalSlides; i++) {
         const dot = document.createElement("button");
         dot.addEventListener("click", () => {
-            goToSlide(i); // Go to specific slide
-            resetAutoSlide(); // Reset auto-sliding
+            goToSlide(i);
+            resetAutoSlide();
         });
         dotsContainer.appendChild(dot);
     }
     updateDots();
 }
 
-// Function to update dot states
+
 function updateDots() {
     const dots = dotsContainer.querySelectorAll("button");
     dots.forEach((dot, index) => {
@@ -163,7 +138,7 @@ function updateDots() {
     });
 }
 
-// Function to show a specific slide
+
 function showSlide(index) {
     const offset = -index * 100;
     carousel.style.transform = `translateX(${offset}%)`;
@@ -171,30 +146,30 @@ function showSlide(index) {
     updateDots();
 }
 
-// Function to navigate to a specific slide
+
 function goToSlide(index) {
     showSlide(index);
 }
 
-// Function to move to the next slide
+
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to the first slide
+    currentSlide = (currentSlide + 1) % totalSlides; 
     showSlide(currentSlide);
 }
 
-// Function to start auto-sliding
+
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 3 seconds
+    autoSlideInterval = setInterval(nextSlide, 5000);
 }
 
-// Function to reset auto-sliding
+
 function resetAutoSlide() {
-    clearInterval(autoSlideInterval); // Stop the interval
-    startAutoSlide(); // Restart the interval
+    clearInterval(autoSlideInterval); 
+    startAutoSlide();
 }
 
-// Initialize
+
 createDots();
 showSlide(currentSlide);
-startAutoSlide(); // Start automatic sliding
+startAutoSlide(); 
 
