@@ -22,7 +22,7 @@
         </div>
         <div class="book-info">
         <h3>Games Untold</h3>
-        <p>Jennifer Lynn background-size</p>
+        <p>Jennifer Lynn</p>
         <h5>$23.99</h5>
         </div>
     </div>

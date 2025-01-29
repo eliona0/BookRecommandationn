@@ -51,5 +51,51 @@
     ?>
 </table>
 
+
+<div style="margin-bottom: 20px;">
+        <a href="AddBook.php">Add Another Book</a>
+    </div>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>IMAGE</th>
+            <th>TITLE</th>
+            <th>AUTHOR</th>
+            <th>PRICE</th>
+            <th>GENRE</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        <?php 
+        include_once 'Database.php';
+        include_once 'Book.php';
+
+        $database = new Database();
+        $connection = $database->getConnection();
+        $bookRepository = new Book($connection);
+        $books = $bookRepository->getAllBooks();
+
+        if (count($books) > 0) {
+            foreach ($books as $book) {
+                echo "
+                <tr>
+                    <td>{$book['id']}</td>
+                    <td ><img style='width: 100px; height: auto;' src='{$book['image']}' alt='Book Image'></td>
+                    <td>{$book['title']}</td>
+                    <td>{$book['author']}</td>
+                    <td>{$book['price']}</td>
+                    <td>{$book['genre']}</td>
+                    <td><a href='editBook.php?id={$book['id']}'>Edit</a></td>
+                    <td><a href='deleteBook.php?id={$book['id']}' onclick='return confirm(\"Are you sure?\")'>Delete</a></td>
+                </tr>";
+            }
+        } else {
+            echo "<tr><td colspan='7'>No books available.</td></tr>";
+        }
+        ?>
+    </table>
+
 </body>
 </html>
