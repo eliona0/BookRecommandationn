@@ -14,8 +14,8 @@ echo '
         <div class="dropdown">
             <a href="Fiction.php">Fiction</a><br>
             <div class="dropdown-content">
-                <a href="#">Mystery</a>
-                <a href="#">Thriller</a>
+                <a href="Mystery.php">Mystery</a>
+                <a href="Thriller.php">Thriller</a>
                 <a href="#">Fantasy</a>
                 <a href="#">Romance</a>
                 <a href="#">Horror</a>
@@ -28,8 +28,8 @@ echo '
         <div class="dropdown">
             <a href="NonFiction.php">NonFiction</a><br>
             <div class="dropdown-content">
-                <a href="#">Biography/Autobiography</a>
-                <a href="#">Memoir</a>
+                <a href="BiographyAutobiography.php">Biography/Autobiography</a>
+                <a href="Memoir.php">Memoir</a>
                 <a href="#">Self-Help</a>
                 <a href="#">History</a>
                 <a href="#">Science & Nature</a>

@@ -1,5 +1,3 @@
-//Validimi per Sign up
-
 document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById('form');
         const validate = (ngjarja2)=>{

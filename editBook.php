@@ -89,6 +89,9 @@ if (isset($_POST['editBtn'])) {
             <option value="Sci-Fi" <?php if ($book['genre'] == 'sci-fi') echo 'selected'; ?>>Sci-Fi</option>
             <option value="Fantasy" <?php if ($book['genre'] == 'fantasy') echo 'selected'; ?>>Fantasy</option>
             <option value="Thriller" <?php if ($book['genre'] == 'thriller') echo 'selected'; ?>>Thriller</option>
+            <option value="Biography/Autobiography" <?php if ($book['genre'] == 'biography/autobiography') echo 'selected'; ?>>Biography/Autobiography</option>
+            <option value="Memoir" <?php if ($book['genre'] == 'memoir') echo 'selected'; ?>>Memoir</option>
+
         </select><br><br>
         
 

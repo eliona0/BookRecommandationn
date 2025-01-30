@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: Login.php"); // Redirect to login if not logged in
+    header("Location: Login.php"); 
     exit;
 }
 ?>
@@ -22,8 +22,6 @@ if (!isset($_SESSION['user_id'])) {
 <div class="header" style="background-image: url('images/header2.webp');" >
     <div class="header-content">
         <h1>"Reading is essential for those who seek to rise above the ordinary." - Jim Rohn</h1>
-        <!-- <h1>Bestsellers, Classics, and More - All in One Place</h1> -->
-    <!-- <h1>Discover Your Next Book...</h1> -->
     <div class="search">
         <input type="text" placeholder="Search by title or author...">
         <button type="submit"><img src="./images/search.png" alt="search "></button>

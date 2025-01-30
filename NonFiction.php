@@ -11,7 +11,7 @@
    ?>
 
 <div class="general-flexbox">
-    <!-- mystery -->
+    <!-- Biography/Autibiography -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Biography/Autobiography </h2>
     <div class="flexbox-content">
