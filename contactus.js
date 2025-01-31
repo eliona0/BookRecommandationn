@@ -1,7 +1,6 @@
 //Validimi per Contact us
-document.addEventListener("DOMContentLoaded", 
-    function(ngjarja3){
-const submit = document.getElementById('message-btn');
+document.addEventListener("DOMContentLoaded",() => {
+    const form = document.getElementById('form');
 const validate = (ngjarja3)=>{
     ngjarja3.preventDefault();
     const name= document.getElementById('name');
@@ -86,8 +85,8 @@ const emailValid= (email) =>{
     const emailRegex = /^([a-zA-Z0-9_\-.])+@([a-zA-Z0-9_\-.])+\.([a-zA-Z]){2,4}$/;
     return emailRegex.test(email);
 };
-const phoneValid= (phone) =>{
-    const phoneRegex = /^\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{3}$/;
+const phoneValid = (phone) => {
+    const phoneRegex = /^\d{9}$/;
     return phoneRegex.test(phone);
 };
 const subjectValid= (subject) =>{
@@ -100,6 +99,6 @@ const messageValid= (message) =>{
 };
 
 
-submit.addEventListener('click', validate);
+form.addEventListener('submit', validate);
 });
 

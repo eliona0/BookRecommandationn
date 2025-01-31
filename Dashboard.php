@@ -8,8 +8,16 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
+<?php include 'navbar.php'; ?>
+
+<div class="dashboard-tables" style="width: 100%; justify-items: center;">
+
+<div class="content" style="width: 80%">
+
+
+
 <div class="margin" style="height: 60px; "></div>
+<h2>USERS</h2>
 <table style="margin-top:30px;" border="1">
     <tr>
         <th>ID</th>
@@ -44,8 +52,8 @@
             <td>{$user['email']}</td>
             <td>{$user['phone']}</td>
             <td>{$user['password']}</td>
-            <td><a href='edit.php?id={$user['id']}'>Edit</a></td>
-            <td><a href='delete.php?id={$user['id']}'>Delete</a></td>
+            <td><a href='editUser.php?id={$user['id']}'>Edit</a></td>
+            <td><a href='deleteUser.php?id={$user['id']} onclick='return confirm(\"Are you sure?\")'>Delete</a></td>
         </tr>
         ";
     }
@@ -54,10 +62,11 @@
 
 
 <div style="margin-bottom: 20px;">
+    <h2>BOOKS</h2>
         <a href="AddBook.php">Add Another Book</a>
     </div>
 
-    <table border="1">
+    <table border="1" style="text-align:center;">
         <tr>
             <th>ID</th>
             <th>IMAGE</th>
@@ -98,5 +107,54 @@
         ?>
     </table>
 
+
+<div style="margin-bottom: 20px;"></div>
+<h2>CONTACT FORMS</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>PHONE</th>
+        <th>SUBJECT</th>
+        <th>MESSAGE</th>
+        <th>USERNAME</th>
+        <th>Delete</th>
+    </tr>
+
+    <?php 
+    include_once 'Database.php';
+    include_once 'Contact.php';
+
+    $database = new Database();
+    $connection = $database->getConnection();
+    $contactRepository = new Contact($connection);
+    $contacts = $contactRepository->getAllContact();
+
+    if (count($contacts) > 0) {
+        foreach ($contacts as $contact) {
+            echo "
+            <tr>
+                <td>{$contact['id']}</td>
+                <td>{$contact['name']}</td>
+                <td>{$contact['email']}</td>
+                <td>{$contact['phone']}</td>
+                <td>{$contact['subject']}</td>
+                <td>{$contact['message']}</td>
+                <td>{$contact['username']}</td> <!-- Shows the user who sent the message -->
+                <td><a href='deleteContact.php?id={$contact['id']}' onclick='return confirm(\"Are you sure?\")'>Delete</a></td>
+            </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='8'>No contact messages available.</td></tr>";
+    }
+    ?>
+</table>
+
+
+
+
+</div>
+</div>
 </body>
 </html>
