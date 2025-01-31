@@ -3,10 +3,10 @@ require_once 'Database.php';
 require_once 'Book.php';
 
 $db = new Database();
-$conn = $db->getConnection(); // Ensure you get the connection
+$conn = $db->getConnection(); 
 
 $book = new Book($conn);
-$books = $book->getAllBooks();  // Fetch books
+$books = $book->getAllBooks();  
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $books = $book->getAllBooks();  // Fetch books
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystery.css">
+    <link rel="stylesheet" href="mystery.css?v=<?php echo time(); ?>">
     <title>Fiction-Mystery</title>
 </head>
 <body>
@@ -36,7 +36,16 @@ $books = $book->getAllBooks();  // Fetch books
                         <h2><?php echo htmlspecialchars($book['title']); ?></h2>
                         <p style="font-weight: 600; font-size: 20px;">By <?php echo htmlspecialchars($book['author']); ?></p>                   
                         <h5>$<?php echo number_format($book['price'], 2); ?></h5>
-                        <button id="add-to-cart">ADD TO CART</button>
+                        <form action="AddToCart.php" method="POST">
+                            <input type="hidden" name="id" value="<?php echo $book['id']; ?>">
+                            <input type="hidden" name="title" value="<?php echo htmlspecialchars($book['title']); ?>">
+                            <input type="hidden" name="author" value="<?php echo htmlspecialchars($book['author']); ?>">
+                            <input type="hidden" name="price" value="<?php echo $book['price']; ?>">
+                            <input type="hidden" name="image" value="<?php echo htmlspecialchars($book['image']); ?>">
+                            <button type="submit" class="add-to-cart">ADD TO CART</button>
+                        </form>
+
+
                     </div>
                 </div>  
             <?php endif; ?>

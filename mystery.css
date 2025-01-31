@@ -51,9 +51,11 @@ body{
     h5{
         font-size: large;
     }
+
+    
 }
 
-#add-to-cart{
+.add-to-cart{
     height: auto;
     width: 35%;
     background-color: #e38c52;
@@ -67,7 +69,7 @@ body{
     text-align: center;
 }
 
-#add-to-cart:hover{
+.add-to-cart:hover{
     width: 35%;
     background-color: white;
     height: 35px;

@@ -36,11 +36,21 @@ $books = $book->getAllBooks();  // Fetch books
                         <h2><?php echo htmlspecialchars($book['title']); ?></h2>
                         <p style="font-weight: 600; font-size: 20px;">By <?php echo htmlspecialchars($book['author']); ?></p>                   
                         <h5>$<?php echo number_format($book['price'], 2); ?></h5>
-                        <button id="add-to-cart">ADD TO CART</button>
+                        <form action="AddToCart.php" method="POST">
+                            <input type="hidden" name="id" value="<?php echo $book['id']; ?>">
+                            <input type="hidden" name="title" value="<?php echo htmlspecialchars($book['title']); ?>">
+                            <input type="hidden" name="author" value="<?php echo htmlspecialchars($book['author']); ?>">
+                            <input type="hidden" name="price" value="<?php echo $book['price']; ?>">
+                            <input type="hidden" name="image" value="<?php echo htmlspecialchars($book['image']); ?>">
+                            <button type="submit" class="add-to-cart">ADD TO CART</button>
+                        </form>
+
+
                     </div>
                 </div>  
             <?php endif; ?>
         <?php endforeach; ?>
+
         
     </div>  
 </div>            
