@@ -10,6 +10,8 @@
 <?php
 session_start();
 include 'Navbar.php';
+
+$total = 0;
 ?>
 
 <div class="my-cart-container">
@@ -32,16 +34,33 @@ include 'Navbar.php';
                             <button type="submit" class="remove">Remove</button>
                         </form>
                     </div>
+                    <?php $total += $cartItem['price']; ?> 
                 </div>
             <?php endforeach; ?>
+            
+            
+            <div class="my-cart-total" style="margin-top: 50px;">
+                <h1>Total: $<?php echo number_format($total, 2); ?></h1>
+            </div>
+
+            <form action="Payment.php" method="POST">
+                <h2>Payment Information</h2>
+                <input type="text" name="name" required placeholder="Full Name"><br><br>
+                <input type="email" name="email" required placeholder="Email"><br><br>
+                <input name="address" required placeholder="Address"></input><br><br>
+                <input type="text" name="card_number" maxlength="16" required placeholder="Card Number"><br><br>
+
+                <input type="hidden" name="total" value="<?php echo $total; ?>"> 
+                <button type="submit" id="buy">Buy</button>
+            </form>
         <?php else: ?>
             <p>Your cart is empty.</p>
         <?php endif; ?>
-        <button id="buy" type="submit" style="margin-top: 50px; margin-left:10px;">Buy</button>
     </div>
 </div>
 
 <?php include 'Footer.php'; ?>
+
 
 </body>
 </html> 

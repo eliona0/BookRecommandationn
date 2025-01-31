@@ -151,7 +151,44 @@
     ?>
 </table>
 
+<div style="margin-bottom: 20px;"></div>
+<h2>PAYMENTS</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Card Number</th>
+    </tr>
 
+    <?php 
+    include_once 'Database.php';
+    $database = new Database();
+    $connection = $database->getConnection();
+
+    // Use PDO properly
+    $query = "SELECT * FROM payments ORDER BY id DESC";
+    $stmt = $connection->prepare($query);
+    $stmt->execute();
+    $payments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (count($payments) > 0) {
+        foreach ($payments as $row) {
+            echo "
+            <tr>
+                <td>{$row['id']}</td>
+                <td>{$row['name']}</td>
+                <td>{$row['email']}</td>
+                <td>{$row['address']}</td>
+                <td>**** **** **** " . substr($row['card_number'], -4) . "</td>
+            </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='5'>No payments recorded.</td></tr>";
+    }
+    ?>
+</table>
 
 
 </div>
