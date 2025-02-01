@@ -8,8 +8,7 @@
 <body>
 <h3>Add Book</h3>
 <form action="" method="post" enctype="multipart/form-data">
-        
-        
+
         <label>Image</label>
         <input type="file" name="image" id="image" required> <br><br>
         
@@ -24,15 +23,15 @@
 
         <label>Genre</label>
         <select name="genre" id="genre">
-        <option value="Unknown" selected>Unknown</option>
-        <option value="Mystery">Mystery</option>
-        <option value="Romance">Romance</option>
-        <option value="Sci-fi">Sci-Fi</option>
-        <option value="Fantasy">Fantasy</option>
-        <option value="Thriller">Thriller</option>
-        <option value="Biography/Autobiography">Biography/Autobiography</option>
-        <option value="Memoir">Memoir</option>
-</select><br><br>
+            <option value="Unknown" selected>Unknown</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-fi">Sci-Fi</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Biography/Autobiography">Biography/Autobiography</option>
+            <option value="Memoir">Memoir</option>
+        </select><br><br>
         
 
         <input type="submit" name="addBtn" value="Add Book"> <br><br>
@@ -82,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     
     if ($book->addBook($image, $title, $author, $price, $genre)) {
-        header("Location: Dashboard.php"); // Redirect to Dashboard
+        header("Location: Dashboard.php"); 
         exit;
     } else {
         echo "Error adding book!";

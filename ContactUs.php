@@ -35,8 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="contactus.css">
 </head>
 <body>
-<?php include 'Navbar.php';
-   ?>
+<?php include 'Navbar.php';?>
 
     <div class="contact-us">
         <div class="contact-us-content">
@@ -75,9 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <button type="submit" style="margin: 20px auto;" id="message-btn">Send Message</button>
                             </div>
                         </div>
-                        
                     </form>
-
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
     <!-- mystery -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Mystery</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -27,7 +27,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 
@@ -104,7 +104,7 @@
 <!-- Thriller -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Thriller</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -117,7 +117,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 
@@ -194,7 +194,7 @@
 <!-- Fantasy -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Fantasy</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -207,7 +207,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 
@@ -284,7 +284,7 @@
 <!-- Romance -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Romance</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -297,7 +297,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button >ADD TO CART</button>
         </div>
     </div>
 
@@ -375,7 +375,7 @@
 <!-- Horror -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Horror</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -388,7 +388,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 
@@ -467,7 +467,7 @@
 <!-- Adventure -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Adventure</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -480,7 +480,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 
@@ -559,7 +559,7 @@
 <!--Science-Fiction Sci-fi -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Science-Fiction (Sci-fi)</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -572,7 +572,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 
@@ -651,7 +651,7 @@
 <!--Historical Fiction -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Historical Fiction</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -664,7 +664,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 
@@ -743,7 +743,7 @@
 <!--Young Adult YA -->
 <div class="flexbox">
     <h2 style="color: coral; font-size: 30px;">Young Adult (YA)</h2>
-    <div class="flexbox-content">
+    <div class="flexbox-content" id="book-flexbox">
         <div class="flexbox-item">
         <div class="the80">
             <div class="img">
@@ -756,7 +756,7 @@
         </div>
     </div>
         <div class="add-to-cart">
-            <button onclick="openBestSellers1()">ADD TO CART</button>
+            <button>ADD TO CART</button>
         </div>
     </div>
 

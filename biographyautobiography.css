@@ -19,7 +19,6 @@ body{
     display: flex;
     justify-content: space-around;
     align-content: start;
-
     padding: 10px;
     border-bottom: 1px solid #ccc;
     border: none;
@@ -44,7 +43,6 @@ body{
 .biography-autobiography-desc{
     width: 75%;
     padding: 20px;
-    
     h5{
         font-size: large;
     }

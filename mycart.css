@@ -1,8 +1,6 @@
 body{
     margin: 0;
-
 }
-
 
 input{
     width: 400px ;
@@ -12,7 +10,6 @@ input{
     border-radius: 4px;
     font-size: 15px;
 }
-
 
 .my-cart-container{
     margin-top: 0;
@@ -24,8 +21,6 @@ input{
     width: 60%;
     padding-top: 100px;
     padding-bottom: 100px;
-
-
 }
 .my-cart-item{
     display: flex;
@@ -61,11 +56,12 @@ input{
         font-size: large;
     }
 }
+
 .cart-buttons{
     display: block;
 }
-#buy{
 
+#buy{
     width: 30%;
     background-color: #e38c52;
     height: 35px;
@@ -78,8 +74,6 @@ input{
     text-align: center;
 }
 
-
-
 #buy:hover{
     background-color: white;
     height: 35px;
@@ -91,6 +85,7 @@ input{
     justify-items: center;
     text-align: center;
 }
+
 .remove {
     border-radius: 20px; 
     color: #e38c52; 
@@ -108,7 +103,7 @@ input{
     color: white;
 }
 form {
- input{
-background-color:#e3e3e3
-}
+    input{
+        background-color:#e3e3e3;
+    }
 }

@@ -22,7 +22,7 @@ class Contact {
         if ($stmt->execute()) {
             return true;
         } else {
-            print_r($stmt->errorInfo()); // Print SQL errors
+            print_r($stmt->errorInfo()); 
             return false;
         }
     }

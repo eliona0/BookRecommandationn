@@ -8,16 +8,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $connection = $db->getConnection();
     $user = new User($connection);
 
-    // Get form data
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Attempt to log in
+    
     if ($user->login($username, $password)) {
-        header("Location: Home.php"); // Redirect to home page
+        header("Location: Home.php"); 
         exit;
     } else {
-        echo "Invalid login credentials!";
+        echo "";
     }
 }
 ?>

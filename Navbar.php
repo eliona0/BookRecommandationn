@@ -1,14 +1,14 @@
 <?php
-// Start session at the very top of the script (before any HTML or echo output)
+
 if (session_status() == PHP_SESSION_NONE) {
-    session_start(); // Only start the session if it's not already active
+    session_start(); 
 }
 
 echo '
 <link rel="stylesheet" href="navbar.css"/>
 <div class="navbar">
     <img src="./images/logo.jpg" alt="logo">
-    <a style="font-size: 22px;" class="a1" href="Home.php"><em>Bookaxy</em></a>
+    <a href="Home.php" style="font-size: 22px;" class="a1" ><em>Bookaxy</em></a>
 
     <div class="links">
         <div class="dropdown">
@@ -55,5 +55,7 @@ echo '
 <div class="hamburger-menu">
     <button type="button"><img src="./images/menu.png"></button>
 </div>
-</div>';
+</div>
+<script src="navbar.js">
+    </script>';
 ?>

@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         unset($_SESSION['cart'][$bookId]);
     }
 
-    // Redirect back to MyCart.php
     header("Location: MyCart.php");
     exit();
 }

@@ -50,18 +50,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $connection = $db->getConnection();
     $user = new User($connection);
 
-    // Get form data
     $name = htmlspecialchars($_POST['name']);
     $surname = htmlspecialchars($_POST['surname']);
     $username = htmlspecialchars($_POST['username']);
     $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
-    // $password = password_hash($_POST['password'], PASSWORD_BCRYPT); // Hash password
     $password = $_POST['password'];
 
-    // Register the user
     if ($user->register($name, $surname, $username, $email, $phone, $password)) {
-        header("Location: Login.php"); // Redirect to login page
+        header("Location: Login.php"); 
         exit;
     } else {
         echo "Error registering user!";

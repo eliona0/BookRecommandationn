@@ -3,10 +3,10 @@ require_once 'Database.php';
 require_once 'Book.php';
 
 $db = new Database();
-$conn = $db->getConnection(); // Ensure you get the connection
+$conn = $db->getConnection(); 
 
 $book = new Book($conn);
-$books = $book->getAllBooks();  // Fetch books
+$books = $book->getAllBooks(); 
 
 ?>
 <!DOCTYPE html>
@@ -18,9 +18,7 @@ $books = $book->getAllBooks();  // Fetch books
     <title>Nonfiction-Biography/Autobiography</title>
 </head>
 <body>
-<?php include 'Navbar.php';
-   ?>
-
+<?php include 'Navbar.php';?>
 
 <div class="biography-autobiography-container">
     <div class="biography-autobiography-content">
@@ -54,11 +52,8 @@ $books = $book->getAllBooks();  // Fetch books
         
     </div>  
 </div>            
-          
-        
 
+<?php include 'Footer.php';?>
 
-<?php include 'Footer.php';
-   ?>
 </body>
 </html>

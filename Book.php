@@ -27,29 +27,6 @@ class Book {
         return false;
     }
 
-    // public function login($username, $password) {
-    //     $query = "SELECT id, name, surname, username,email,phone, password FROM {$this->table_name} WHERE username = :username";
-
-
-    //     $stmt = $this->conn->prepare($query);
-    //     $stmt->bindParam(':username', $username);
-    //     $stmt->execute();
-
-
-    //     if ($stmt->rowCount() > 0) {
-    //         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    //         if (password_verify($password, $row['password'])) {
-    //             session_start();
-    //             $_SESSION['user_id'] = $row['id'];
-    //             $_SESSION['username'] = $row['username'];
-    //             return true;
-    //         } else {
-    //             echo "Password does not match.";
-    //         }
-    //     }
-    //     return false;
-    // }
-
     public function getAllBooks() {
         $sql = "SELECT * FROM {$this->table_name}";
         $statement = $this->conn->prepare($sql);
@@ -73,16 +50,10 @@ class Book {
 
     
     public function updateBook($id, $image, $title, $author, $price, $genre) {
-        // if ($password) {
-        //     $query = "UPDATE {$this->table_name} 
-        //               SET name = :name, surname = :surname, email = :email, username = :username, password = :password 
-        //               WHERE id = :id";
-        // } else {
             $query = "UPDATE {$this->table_name} 
                       SET image = :image, title = :title, author = :author, price = :price , genre = :genre
                       WHERE id = :id";
-        //}
-    
+
         $stmt = $this->conn->prepare($query);
     
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -91,11 +62,6 @@ class Book {
         $stmt->bindParam(':author', $author);
         $stmt->bindParam(':price', $price);
         $stmt->bindParam(':genre', $genre);
-
-    
-        // if ($password) {
-        //     $stmt->bindParam(':password', password_hash($password, PASSWORD_DEFAULT));
-        // }
     
         return $stmt->execute();
     }
