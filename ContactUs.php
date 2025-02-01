@@ -1,5 +1,17 @@
 <?php
+
 session_start();
+
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: Login.php");
+    exit;
+}
+
+// session_start();
 include_once 'Database.php';
 include_once 'Contact.php';
 
@@ -43,48 +55,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h1>Contact Us</h1>
                 <p>We'd love to hear from you! Please use the form below to get in touch.</p>   
             </div>
-            <div class="contact-form" >
-                    <form action="ContactUs.php" method="POST" id="form">
-                        <div class="contact-us-rows">
-                            <div class="label-input">
-                                <p><label for="name">Name</label></p>
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="label-input">
-                                <p><label for="email">Email</label></p>
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
+            <div class="contact-form">
+                <form action="ContactUs.php" method="POST" id="form">
+                    <div class="contact-us-rows">
+                        <div class="label-input">
+                            <p><label for="name">Name</label></p>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
+                        <div class="label-input">
+                            <p><label for="email">Email</label></p>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
 
-                        <div class="contact-us-rows">
-                            <div class="label-input">
-                                <p><label for="phone">Phone Number</label></p>
-                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
-                            </div>
-                            <div class="label-input"> 
-                                <p><label for="subject">Subject</label></p>
-                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            </div>
+                    <div class="contact-us-rows">
+                        <div class="label-input">
+                            <p><label for="phone">Phone Number</label></p>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
                         </div>
+                        <div class="label-input"> 
+                            <p><label for="subject">Subject</label></p>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                    </div>
 
-                        <div class="contact-us-rows">
-                            <div class="message-label-input">
-                                <p><label for="message">Message</label></p>
-                                <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
-                                <button type="submit" style="margin: 20px auto;" id="message-btn">Send Message</button>
-                            </div>
+                    <div class="contact-us-rows">
+                        <div class="message-label-input">
+                            <p><label for="message">Message</label></p>
+                            <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+                            <button type="submit" style="margin: 20px auto;" id="message-btn">Send Message</button>
                         </div>
-                    </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
+    <?php include 'Footer.php'; ?>
 
-    <?php include 'Footer.php';
-   ?>
-    
-    <!-- <script src="contactus.js"> -->
-    </script>
+    <script src="contactus.js"></script>
 </body>
 </html>
+
 
