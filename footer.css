@@ -64,7 +64,6 @@
     height: 250px;
     text-align: left;
     padding-left: 20px;
-    /* background-color: blueviolet; */
 }
 
 .for-email{
@@ -72,7 +71,6 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    /* background-color: aqua; */
 
     button{
         margin-left: 5px;
@@ -116,6 +114,10 @@
         /* background-color: #88507e; */
         padding-left: 0;
         justify-items: left;
+    }
+
+    .socials{
+        width: 80%;
     }
 
     .inner-element{

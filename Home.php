@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookaxy</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home.css?<?php echo time(); ?>">
 </head>
 <body>
    <?php include 'Navbar.php';
@@ -186,14 +186,14 @@ if (!isset($_SESSION['user_id'])) {
             <img src="./images/bestSellers1.webp" alt="Main Street Millionaire">
         </div>
         <div class="book-info">
-        <h3>Main Street Millionaire: How to Make Extraordinary Wealth...</h3>
+        <h3>Main Street Millionaire</h3>
         <p>Codie Sanchez</p>
         <h5>$27.90</h5>
         </div>
     </div>
-        <div class="add-to-cart" id="cart1">
+        <!-- <div class="add-to-cart" id="cart1">
             <button type="submit">ADD TO CART</button>
-        </div>
+        </div> -->
     </div>
 
     <div class="flexbox-item">
@@ -202,14 +202,11 @@ if (!isset($_SESSION['user_id'])) {
             <img src="./images/bestSellers2.webp" alt="Everything Is Tuberculosis">
         </div>
         <div class="book-info">
-            <h3>Everything Is Tuberculosis (Signed Edition): The History and...</h3>
+            <h3>Everything Is Tuberculosis</h3>
             <p>John Green</p>
             <h5>$26.04</h5>
             </div>
         </div>
-            <div class="add-to-cart" id="cart2">
-                <button type="submit">ADD TO CART</button>
-            </div>
         </div>
 
         <div class="flexbox-item">
@@ -223,9 +220,6 @@ if (!isset($_SESSION['user_id'])) {
             <h5>$11.16</h5>
             </div>
         </div>
-            <div class="add-to-cart" id="cart3">
-                <button type="submit">ADD TO CART</button>
-            </div>
         </div>
 
 
@@ -235,14 +229,11 @@ if (!isset($_SESSION['user_id'])) {
             <img src="./images/bestSellers4.jpg" alt="The Serviceberry">
         </div>
         <div class="book-info">
-            <h3>The Serviceberry: Abundance and Reciprocity...</h3>
+            <h3>The Serviceberry</h3>
             <p>Robin Wall Kimmerer</p>
             <h5>$23.94</h5>
             </div>
         </div>
-            <div class="add-to-cart" id="cart4">
-                <button type="submit">ADD TO CART</button>
-            </div>
         </div>
 
 
@@ -257,9 +248,6 @@ if (!isset($_SESSION['user_id'])) {
                 <h5>$18.60</h5>
             </div>
         </div>
-            <div class="add-to-cart" id="cart5">
-                <button type="submit">ADD TO CART</button>
-            </div>
         </div>
 </div>
 </div>

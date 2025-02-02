@@ -76,6 +76,8 @@ body{
 .book-info{
     width: 70%;
     text-align:left ;
+    margin-top: 20px;
+
 }
 
 .book-info p{
@@ -130,11 +132,27 @@ body{
 @media (max-width: 830px){
 
     .flexbox-item{
-        width: 180px;
-        height: 500px;
+        width: 140px;
+        height: 380px;
 
+        h3{
+            font-size: 14px;
+        }
+
+        p{
+            font-size: 15px;
+        }
         img{
-            width: 140px;
+            width: 120px;
+        }
+
+        .the80{
+            width: 100%;
+        }
+
+        button{
+            width: 100%;
+            font-size: 12px;
         }
     }
 

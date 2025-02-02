@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookaxy-Nonfiction</title>
-    <link rel="stylesheet" href="nonfiction.css">
+    <link rel="stylesheet" href="nonfiction.css?<?php echo time(); ?>">
 </head>
 <body>
     <?php include 'Navbar.php';
@@ -937,6 +937,5 @@ if (!isset($_SESSION['user_id'])) {
 
     </div>
     <?php include 'Footer.php';?>
-    <script src="home.js"></script>
 </body>
 </html>

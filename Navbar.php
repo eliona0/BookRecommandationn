@@ -1,18 +1,17 @@
 <?php
-
 if (session_status() == PHP_SESSION_NONE) {
-    session_start(); 
+    session_start();
 }
+?>
+<link rel="stylesheet" href="navbar.css?<?php echo time(); ?>" />
 
-echo '
-<link rel="stylesheet" href="navbar.css"/>
 <div class="navbar">
     <img src="./images/logo.jpg" alt="logo">
-    <a href="Home.php" style="font-size: 22px;" class="a1" ><em>Bookaxy</em></a>
+    <a href="Home.php" class="a1"><em>Bookaxy</em></a>
 
     <div class="links">
         <div class="dropdown">
-            <a href="Fiction.php">Fiction</a><br>
+            <a href="Fiction.php">Fiction</a>
             <div class="dropdown-content">
                 <a href="Mystery.php">Mystery</a>
                 <a href="Thriller.php">Thriller</a>
@@ -26,7 +25,7 @@ echo '
             </div>
         </div>
         <div class="dropdown">
-            <a href="NonFiction.php">NonFiction</a><br>
+            <a href="NonFiction.php">NonFiction</a>
             <div class="dropdown-content">
                 <a href="BiographyAutobiography.php">Biography/Autobiography</a>
                 <a href="Memoir.php">Memoir</a>
@@ -42,20 +41,29 @@ echo '
         </div>
         <p><a href="ContactUs.php">Contact Us</a></p>
         <p><a href="MyCart.php">My Cart</a></p>
-';
 
-$currentPage = basename($_SERVER['PHP_SELF']);  
-if (isset($_SESSION['username']) && $_SESSION['username'] === 'admin') { 
-    echo '<p><a href="Dashboard.php" class="' . ($currentPage == 'Dashboard.php' ? 'active' : '') . '" >Dashboard</a></p>';
-}
+        <?php
+        // $currentPage = basename($_SERVER['PHP_SELF']);  
+        // if (isset($_SESSION['username']) && $_SESSION['username'] === 'admin') { 
+        //     echo '<p><a href="Dashboard.php" class="' . ($currentPage == 'Dashboard.php' ? 'active' : '') . '">Dashboard</a></p>';
+        // }
 
-echo '
-<button type="button"><a href="logout.php">Logout</a></button>
+        if (isset($_SESSION['username']) && $_SESSION['username'] === 'admin'): ?>
+            <p><a href="Dashboard.php">Dashboard</a></p>
+        <?php endif; ?>
+        
+
+        <button type="button"><a href="logout.php">Logout</a></button>
+        
+    </div>
+    <div class="responsive-navbar">
+        <button type="button" onclick="toggleNavbar()"><img style="border-radius:0px; width:30px;" src="./images/menu.png"></button>
+        </div>
 </div>
-<div class="hamburger-menu">
-    <button type="button"><img src="./images/menu.png"></button>
-</div>
-</div>
-<script src="navbar.js">
-    </script>';
-?>
+
+<script>
+    function toggleNavbar() {
+        const links = document.querySelector('.links');
+        links.classList.toggle('show');
+    }
+</script>
